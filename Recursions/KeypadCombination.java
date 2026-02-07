@@ -1,5 +1,5 @@
 public class KeypadCombination {
-    public static String keypad[] = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs","tu", "vwx", "yz"};
+    public static String keypad[] = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs","tuv", "wxyz"};
     public static void printKeypadCombination(String number, int idx, String res) {
         if(idx == number.length()) {
             System.out.println(res);
@@ -11,7 +11,7 @@ public class KeypadCombination {
         }
     }
     public static void main(String args[]) {
-        String number = "23";
+        String number = "83";
         printKeypadCombination(number, 0, "");
     }
 }
