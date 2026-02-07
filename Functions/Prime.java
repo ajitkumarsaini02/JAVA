@@ -1,4 +1,3 @@
-
 public class Prime {
     public static void isPrime(int n) {
         if(n<1){

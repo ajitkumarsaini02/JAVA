@@ -1,7 +1,4 @@
-
-
 import java.util.Scanner;
-
 public class Sum {
     public static int CalculateSum(int a, int b) {
         int sum = a+b;

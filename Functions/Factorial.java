@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-
 public class Factorial {
     public static void Printfact(int n){
         int a=1;

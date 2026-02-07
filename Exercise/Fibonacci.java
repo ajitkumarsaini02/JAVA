@@ -1,8 +1,4 @@
-
 import java.util.Scanner;
-
-
-
 public class Fibonacci {
     public static void fib(int n){
         int n1=0;
