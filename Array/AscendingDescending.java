@@ -20,5 +20,6 @@ public class AscendingDescending {
         else{
             System.out.println("The array is not sorted in ascending order");
         }
+        sc.close();
     }
 }
