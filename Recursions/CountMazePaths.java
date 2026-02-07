@@ -1,9 +1,6 @@
 public class CountMazePaths {
     
     public static int countPaths(int i, int j, int m, int n){
-        if(n==m){
-            return 0;
-        }
         if(i==m-1 || j==n-1){
             return 1;
         }
