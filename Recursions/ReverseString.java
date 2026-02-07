@@ -1,4 +1,3 @@
-
 public class ReverseString {
     public static String revString(String str) {
         if(str.length() == 1) {
