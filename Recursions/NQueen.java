@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 public class NQueen {
    public boolean isSafe(int row, int col, char[][] board) {
        //horizontal
