@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Prime {
-
     private int n;
 
     public Prime(int n) {

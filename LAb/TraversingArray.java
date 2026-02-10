@@ -1,15 +1,18 @@
-
 import java.util.Scanner;
 
-
 public class TraversingArray {
-    public static void main(String[] args) {
+
+    private int[][] arr;
+    private int rows;
+
+    public TraversingArray(int rows) {
+        this.rows = rows;
+        arr = new int[rows][];
+    }
+
+    public void inputArray() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of rows for the jagged array: ");
-        int rows = sc.nextInt();
-        
-        int[][] arr = new int[rows][];
-        
+
         for (int i = 0; i < rows; i++) {
             System.out.print("Enter number of columns for row " + i + ": ");
             int cols = sc.nextInt();
@@ -23,7 +26,9 @@ public class TraversingArray {
                 arr[i][j] = sc.nextInt();
             }
         }
-        
+    }
+
+    public void displayArray() {
         System.out.println("\nThe jagged array is:");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -31,8 +36,17 @@ public class TraversingArray {
             }
             System.out.println();
         }
-        
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the jagged array: ");
+        int rows = sc.nextInt();
+        TraversingArray obj = new TraversingArray(rows);
+        obj.inputArray();
+        obj.displayArray();
+
         sc.close();
     }
-    
 }
