@@ -1,13 +1,9 @@
 import java.util.Scanner;
-
 public class Palindrome {
-
     int number;
-
     public Palindrome(int n) {
         this.number = n;
     }
-
     public boolean isPalindrome() {
         int temp = number;
         int rev = 0;
@@ -18,7 +14,6 @@ public class Palindrome {
         }
         return number == rev;
     }
-
     public void displayResult() {
         if (isPalindrome()) {
             System.out.println(number + " is a Palindrome Number");
@@ -26,7 +21,6 @@ public class Palindrome {
             System.out.println(number + " is not a Palindrome Number");
         }
     }
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

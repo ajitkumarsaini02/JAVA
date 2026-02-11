@@ -1,5 +1,4 @@
-// Write a Java program to demonstrate Compile-time Polymorphism (Method Overloading) by creating a class Calculator
-// that performs addition of integers, floating values, and three numbers using overloaded methods.
+import java.util.Scanner;
 public class Calculator {
     public int add(int a, int b) {
         return a + b;
@@ -54,17 +53,29 @@ public class Calculator {
     }
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        System.out.println("Addition of integers: " + calculator.add(5, 10));
-        System.out.println("Addition of floating values: " + calculator.add(5.5, 10.5));
-        System.out.println("Addition of three numbers: " + calculator.add(5.5, 10.5, 15.5));
-        System.out.println("Subtraction of integers: " + calculator.subtract(10, 5));
-        System.out.println("Subtraction of floating values: " + calculator.subtract(10.5, 5.5));
-        System.out.println("Subtraction of three numbers: " + calculator.subtract(15.5, 10.5, 5.5));
-        System.out.println("Multiplication of integers: " + calculator.multiply(5, 10));
-        System.out.println("Multiplication of floating values: " + calculator.multiply(5.5, 10.5));
-        System.out.println("Multiplication of three numbers: " + calculator.multiply(5.5, 10.5, 15.5));
-        System.out.println("Division of integers: " + calculator.divide(10, 5));
-        System.out.println("Division of floating values: " + calculator.divide(10.5, 5.5));
-        System.out.println("Division of three numbers: " + calculator.divide(15.5, 10.5, 5.5));
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter two integers : ");
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
+        System.out.print("Enter two floating values : ");
+        double f1 = sc.nextDouble();
+        double f2 = sc.nextDouble();
+        System.out.print("Enter three floating values : ");
+        double f3 = sc.nextDouble();
+        double f4 = sc.nextDouble();
+        double f5 = sc.nextDouble();
+        sc.close();
+        System.out.println("Addition of integers: " + calculator.add(n1, n2));
+        System.out.println("Addition of floating values: " + calculator.add(f1, f2));
+        System.out.println("Addition of three numbers: " + calculator.add(f3, f4, f5));
+        System.out.println("Subtraction of integers: " + calculator.subtract(n1, n2));
+        System.out.println("Subtraction of floating values: " + calculator.subtract(f1, f2));
+        System.out.println("Subtraction of three numbers: " + calculator.subtract(f3, f4, f5));
+        System.out.println("Multiplication of integers: " + calculator.multiply(n1, n2));
+        System.out.println("Multiplication of floating values: " + calculator.multiply(f1, f2));
+        System.out.println("Multiplication of three numbers: " + calculator.multiply(f3, f4, f5));
+        System.out.println("Division of integers: " + calculator.divide(n1, n2));
+        System.out.println("Division of floating values: " + calculator.divide(f1, f2));
+        System.out.println("Division of three numbers: " + calculator.divide(f3, f4, f5));
     }
 }

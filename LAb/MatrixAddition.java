@@ -1,12 +1,9 @@
 import java.util.Scanner;
-
 public class MatrixAddition {
-
-    private int n, m;
-    private int arr1[][];
-    private int arr2[][];
-    private int result[][];
-
+    int n, m;
+    int arr1[][];
+    int arr2[][];
+    int result[][];
     public MatrixAddition(int n, int m) {
         this.n = n;
         this.m = m;
@@ -14,7 +11,6 @@ public class MatrixAddition {
         arr2 = new int[n][m];
         result = new int[n][m];
     }
-
     public void inputMatrices() {
         Scanner sc = new Scanner(System.in);
 
@@ -31,7 +27,6 @@ public class MatrixAddition {
             }
         }
     }
-
     public void addMatrices() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -39,7 +34,6 @@ public class MatrixAddition {
             }
         }
     }
-
     public void displayResult() {
         System.out.println("Addition of matrices:");
         for (int i = 0; i < n; i++) {
@@ -49,7 +43,6 @@ public class MatrixAddition {
             System.out.println();
         }
     }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of rows: ");
@@ -60,7 +53,6 @@ public class MatrixAddition {
         obj.inputMatrices();
         obj.addMatrices();
         obj.displayResult();
-
         sc.close();
     }
 }

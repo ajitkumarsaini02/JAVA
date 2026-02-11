@@ -1,13 +1,9 @@
-// Write a Java program to create a BankAccount class that will show instance variables such as AccountNumber,
-// AccountHolderName, BankName and balance include method to perform operationsmoperations like
-// deposit, withdraw, and print details. Show the use of 'static' on any one instance variables.
 public class BankAccount {
     String accountNumber;
     static String bankName;
     String accountHolderName;
     String branch;
     double balance;
-
     public BankAccount(String accountHolderName, String accountNumber, double initialBalance) {
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
@@ -42,12 +38,12 @@ public class BankAccount {
     }
     public static void main(String[] args) {
         BankAccount.bankName = "State Bank of India";
-        BankAccount account = new BankAccount("John Doe", "123456789", 1000.0);
+        BankAccount account = new BankAccount("John Doe",
+                        "123456789", 1000.0);
         account.displayAccountInfo();
         account.deposit(500.0);
         account.getBalance();
         account.withdraw(200.0);
         account.getBalance();
     }
-    
 }

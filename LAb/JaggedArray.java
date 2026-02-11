@@ -1,15 +1,11 @@
 import java.util.Scanner;
-
 public class JaggedArray {
-
-    private int[][] arr;
-    private int rows;
-
+    int[][] arr;
+    int rows;
     public JaggedArray(int rows) {
         this.rows = rows;
         arr = new int[rows][];
     }
-
     public void inputArray() {
         Scanner sc = new Scanner(System.in);
 
@@ -27,7 +23,6 @@ public class JaggedArray {
             }
         }
     }
-
     public void displayArray() {
         System.out.println("\nThe jagged array is:");
         for (int i = 0; i < arr.length; i++) {
@@ -37,7 +32,6 @@ public class JaggedArray {
             System.out.println();
         }
     }
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -46,7 +40,6 @@ public class JaggedArray {
         JaggedArray obj = new JaggedArray(rows);
         obj.inputArray();
         obj.displayArray();
-
         sc.close();
     }
 }
