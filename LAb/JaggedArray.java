@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class TraversingArray {
+public class JaggedArray {
 
     private int[][] arr;
     private int rows;
 
-    public TraversingArray(int rows) {
+    public JaggedArray(int rows) {
         this.rows = rows;
         arr = new int[rows][];
     }
@@ -43,7 +43,7 @@ public class TraversingArray {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of rows for the jagged array: ");
         int rows = sc.nextInt();
-        TraversingArray obj = new TraversingArray(rows);
+        JaggedArray obj = new JaggedArray(rows);
         obj.inputArray();
         obj.displayArray();
 
