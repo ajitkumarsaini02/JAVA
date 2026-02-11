@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Palindrome {
 
-    private int number;
+    int number;
 
     public Palindrome(int n) {
         this.number = n;

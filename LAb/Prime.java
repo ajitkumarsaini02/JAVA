@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Prime {
-    private int n;
+    int n;
 
     public Prime(int n) {
         this.n = n;

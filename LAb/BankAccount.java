@@ -1,14 +1,18 @@
-// Write a Java program to create a BankAccount class using encapsulation (private data members) and perform operations such as 
-// deposit, withdraw, and display balance using menu-driven choices.
+// Write a Java program to create a BankAccount class that will show instance variables such as AccountNumber,
+// AccountHolderName, BankName and balance include method to perform operationsmoperations like
+// deposit, withdraw, and print details. Show the use of 'static' on any one instance variables.
 public class BankAccount {
-    private String accountHolderName;
-    private String accountNumber;
-    private double balance;
+    String accountNumber;
+    static String bankName;
+    String accountHolderName;
+    String branch;
+    double balance;
 
     public BankAccount(String accountHolderName, String accountNumber, double initialBalance) {
         this.accountHolderName = accountHolderName;
         this.accountNumber = accountNumber;
         this.balance = initialBalance;
+        this.branch = "Main Branch";
     }
     public void getBalance(){
         System.out.println("Current Balance: " + balance);
@@ -30,12 +34,14 @@ public class BankAccount {
         }
     }
     public void displayAccountInfo() {
+        System.out.println("Bank Name: " + bankName);
+        System.out.println("Branch: " + branch);
         System.out.println("Account Holder: " + accountHolderName);
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Balance: " + balance);
     }
     public static void main(String[] args) {
-        // display menu driven choices
+        BankAccount.bankName = "State Bank of India";
         BankAccount account = new BankAccount("John Doe", "123456789", 1000.0);
         account.displayAccountInfo();
         account.deposit(500.0);
