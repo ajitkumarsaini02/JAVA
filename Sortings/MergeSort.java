@@ -1,45 +1,43 @@
 public class MergeSort {
-    public static void mergeSort(int[] arr, int left, int right) {
-        if(left >=right){
-            return;
-        }
-        int mid = left + (right - left) / 2;
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid + 1, right);
-        merge(arr, left, mid, right);
-    }
-
-    public static void merge(int[] arr, int left, int mid, int right) {
-
-        int merged[] = new int[right - left +1];
-        int i = left, j = mid + 1, k = 0;
-        while (i <= mid && j <= right) {
-            if (arr[i] <=arr[j]) {
-                merged[k++] = arr[i++];
-            } else {
-                merged[k++] = arr[j++];
+    public static void merge(int arr[], int low, int mid, int high){
+        int merged[] = new int[high-low+1];
+        int idx1  = low;
+        int idx2 = mid+1;
+        int x = 0;
+        while(idx1 <= mid && idx2 <=high){
+            if(arr[idx1] <= arr[idx2]){
+                merged[x++] = arr[idx1++];
+            }
+            else{
+                merged[x++] = arr[idx2++];
             }
         }
-
-        while (i <= mid) {
-            merged[k++] = arr[i++];
+        while(idx1 <= mid){
+            merged[x++] = arr[idx1++];
         }
-
-        while (j <= right) {
-            merged[k++] = arr[j++];
+        while(idx2 <= high){
+            merged[x++] = arr[idx2++];
         }
+        for(int i=0, j=low; i<merged.length; i++, j++){
+            arr[j] = merged[i];
+        }
+    }
 
-        for (int p = 0, q = left; p < merged.length; p++, q++) {
-            arr[q] = merged[p];
+    public static void mergedSort(int arr[], int low, int high){
+        if(low < high){
+            int mid = low +(high-low)/2;
+            mergedSort(arr, low, mid);
+            mergedSort(arr, mid+1, high);
+            merge(arr, low, mid, high);
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = {38, 27, 43, 3, 9, 82, 10};
-        mergeSort(arr, 0, arr.length - 1);
-        System.out.println("Sorted array: ");
-        for (int num : arr) {
-            System.out.print(num + " ");
+        int arr[] = {5, 4, 1, 45, 2, 5};
+        mergedSort(arr, 0, arr.length-1);
+        for(int i=0;i<arr.length; i++){
+            System.out.print(arr[i]+" ");
         }
+        System.out.println();
     }
 }
