@@ -1,7 +1,6 @@
-
+// This code is belongs to Ajit Kumar Saini (2400320100114)
 import java.util.Scanner;
 
-// Step 1: Create Custom Exception Class
 class NegativeAmountException extends Exception {
 
     public NegativeAmountException(String message) {
@@ -9,7 +8,6 @@ class NegativeAmountException extends Exception {
     }
 }
 
-// Step 2: Bank Class
 class BankAccount {
 
     private double balance;
@@ -18,7 +16,6 @@ class BankAccount {
         this.balance = balance;
     }
 
-    // Method to deposit money
     public void deposit(double amount) throws NegativeAmountException {
 
         if (amount < 0) {
@@ -34,16 +31,11 @@ class BankAccount {
     }
 }
 
-
-// Step 3: Main Class
 public class UserDefinedExceptionDemo {
 
     public static void main(String[] args) {
-
+        System.out.println("This code is belong to Ajit Kumar (2400320100114)");
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("User Defined Exception Demo");
-        System.out.println("----------------------------");
 
         BankAccount account = new BankAccount(1000);
 
