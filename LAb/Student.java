@@ -1,3 +1,4 @@
+//This code is belongs to Ajit Kumar Saini (2400320100114)
 class Student{
     String name;
     int rollNo;
@@ -13,6 +14,7 @@ class Student{
         System.out.println("Branch: " + branch);
     }
     public static void main(String[] args) {
+        System.out.println("This code is belongs to Ajit Kumar Saini (2400320100114)");
         Student s1 = new Student("Aditya", 103, "CSE");
         Student s2 = new Student("Ansh", 135, "ECE");
         System.out.println("Student 1 Information:");
