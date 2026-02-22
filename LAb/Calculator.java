@@ -1,3 +1,4 @@
+// This code is belong to Ajit Kumar (2400320100114)
 import java.util.Scanner;
 public class Calculator {
     public int add(int a, int b) {
@@ -65,6 +66,7 @@ public class Calculator {
         double f4 = sc.nextDouble();
         double f5 = sc.nextDouble();
         sc.close();
+        System.out.println("This code is belong to Ajit Kumar (2400320100114)");
         System.out.println("Addition of integers: " + calculator.add(n1, n2));
         System.out.println("Addition of floating values: " + calculator.add(f1, f2));
         System.out.println("Addition of three numbers: " + calculator.add(f3, f4, f5));
